@@ -17,19 +17,26 @@ with open(csvpath) as csvfile:
         csvwriter = csv.writer(newcsv,delimiter=" ")
 
         for row in csvreader:
+            #Add vote to votes list
             votes.append(str(row[2]))
 
         for i in votes:
             if i not in unique_cand:
+                #Generates unique list of candidates that have votes
                 unique_cand.append(i)
-        # for     
+
+        #Header  
         print("Election Results")
         csvwriter.writerow(["Election Results"])
+
+        #Separator
         print("----------------")
         csvwriter.writerow(["-----------------"])
+
         #Total Number of Votes Cast
         print(f"Total Votes: {len(votes)}")
         csvwriter.writerow(["Total Votes: " + str(len(votes))])
+
         #Complete List of candiates who received votes
         #Percentage of votes each candidate won
         #Total number of votes each candiate won
@@ -45,9 +52,10 @@ with open(csvpath) as csvfile:
             #Find candidate with most votes
             if votes.count(cand) == greatest_vote:
                 winner = cand
-        #Winner of election based on popular vote
+        #Separator
         print("----------------")
         csvwriter.writerow(["--------------"])
+        #Winner of election based on popular vote
         print(f"Winner: {winner}")
         csvwriter.writerow(["Winner: " + str(winner)])
         

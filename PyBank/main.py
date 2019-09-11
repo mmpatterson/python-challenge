@@ -1,7 +1,6 @@
 import os
 import csv
 
-
 # Establish file path for test file
 csvpath = os.path.join('..', 'PyBank', 'budget_data.csv')
 # Establish file path for output file
@@ -11,6 +10,7 @@ with open(csvpath) as csvfile:
     with open(output_path, 'w', newline='') as newcsv:
         csvwriter = csv.writer(newcsv,delimiter=" ")
         csvheader = next(csvfile)
+        #Initial Values
         months = []
         num_months = 0
         max_profit = 0
@@ -20,7 +20,6 @@ with open(csvpath) as csvfile:
         net_prof = 0
         max_change = 0
 
-        
         for row in csvreader:
             months.append(row[0])
             #Count number of months
@@ -34,6 +33,7 @@ with open(csvpath) as csvfile:
                 min_profit = int(row[1])
                 min_month = str(row[0])
 
+        #Average Profit
         average_prof = int(net_prof / num_months)
 
         #Header
