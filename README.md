@@ -7,12 +7,18 @@ The PyBank folder can be found [here](https://github.com/mmpatterson/python-chal
 The PyPoll folder can be found [here](https://github.com/mmpatterson/python-challenge/tree/master/PyPoll)
 
 PyBank will:
--Read the budget_data.csv file
--Calculate the results
--Export the results to a new .csv
+
+*Read the budget_data.csv file
+
+*Calculate the results
+
+*Export the results to a new .csv
 
 PyPoll will:
--Read the election_data.csv file
--Calculate the results
--Export the results to a new .csv
+
+*Read the election_data.csv file
+
+*Calculate the results
+
+*Export the results to a new .csv
 
